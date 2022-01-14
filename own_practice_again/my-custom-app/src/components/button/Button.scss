@@ -1,0 +1,19 @@
+@import "../../styles/commons.scss";
+.btnClass{
+    .primary{
+        text-transform: uppercase;
+        &:hover{
+            color:$white1;
+            background-color: $black1;
+        }
+        &:active{
+            color:$black1;
+            background-color: $white1;
+        }
+    }
+    .disabled{
+        color: $black1;
+        background-color: $white1;
+    }
+
+}

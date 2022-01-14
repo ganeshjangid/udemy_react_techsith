@@ -1,0 +1,32 @@
+@import "./vars";
+
+.bgYellow{
+    background-color: $yellow1;
+}
+
+.fontBlack{
+    color:$black1;
+}
+
+.fontWhite{
+    color:$white1;
+}
+.pad8{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.width150{
+    width: 200px;
+}
+.height100{
+    height: 70px;
+}
+.radius40{
+    border-radius: 40px;
+}
+.fontWeight700{
+    font-weight: 700;
+}
+.fontSize25{
+    font-size: 25px;
+}
