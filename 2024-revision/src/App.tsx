@@ -1,39 +1,29 @@
-import React, { useEffect,useRef } from 'react';
+import React, { useState,useMemo } from 'react';
 import './App.css';
+import Child from './child';
 
 function App() {
-  const nameRef=useRef();
-  const ageRef=useRef();
-  const marriedRef=useRef();
-  const submitRef=useRef();
+const [i,setI]=useState(0);
 
-  useEffect(()=>{
+const handleIncrement=()=>{
+  setI(i+1);
+}
 
-  },[]);
-
+const memoChild=useMemo(()=>{
+  return <Child />
+},[i])
   return (
     <div className="App">
       <header className="App-header">
         <p className='startHeading'>
-          Start Revision from 2024 (UseRef)
-        </p>  
-          <div>
-            <span>Name:</span>
-            <input ref={nameRef} type='text' placeholder='Enter Name'/>
-          </div>
-          <div>
-            <span>AGe:</span>
-            <input type='text' ref={ageRef} placeholder='Enter Age'/>
-          </div>
-          <div>
-            <span>Married:</span>
-            <input type="checkbox" ref={marriedRef} />
-          </div>
-          <div>
-            <input type="button"  ref={submitRef} value="Submit" />
-          </div>
-
-
+          Start Revision from 2024 (UseMemo)
+        </p>
+        <p>i {i}</p>
+        <p><button onClick={handleIncrement}>Increment 1</button></p>
+          <h3>Normal Render</h3>
+          <Child/>
+          <h3>Memo Child</h3>
+          {memoChild}
       </header>
     </div>
   );
