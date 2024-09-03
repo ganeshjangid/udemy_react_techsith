@@ -72,3 +72,17 @@
   border: 2px solid blue;
   margin: 2%;
 }
+
+.appLink{
+  color:Green;
+  text-decoration: none;
+  
+}
+ul>li {
+  list-style-type: none;
+}
+
+ul>li :hover {
+  text-decoration: underline;
+  color: blue;
+}
