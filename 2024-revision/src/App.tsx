@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/pages/home';
 import About from './components/pages/about';
 import User from './components/pages/user';
+import {messageContext} from './components/Contexts/messageContext';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   }
   return (
     <BrowserRouter>
+    <messageContext.Provider value='This is nice one'>
       <div className="App">
         <header className="App-header">
           <p className='startHeading'>
@@ -37,7 +39,9 @@ function App() {
           </Routes>
 
         </header>
-      </div></BrowserRouter>
+      </div>
+      </messageContext.Provider>
+      </BrowserRouter>
 
   );
 }
